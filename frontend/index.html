@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KnowledgeForge AI - Turn Documents into Intelligent Quizzes</title>
+  <meta name="description" content="AI-powered quiz generation platform. Upload PDF or TXT educational documents and let Gemini AI generate interactive quizzes in seconds.">
+  <meta property="og:title" content="KnowledgeForge AI">
+  <meta property="og:description" content="Turn your documents into intelligent quizzes with instant explanations and performance analysis.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="brand-icon-wrapper">
+          <!-- Logo Concept: Brain + Document + Check Mark -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H14l5 5v12.5a2.5 2.5 0 0 1-2.5 2.5h-10A2.5 2.5 0 0 1 4 19.5Z" />
+            <path d="M9 13.5a2.5 2.5 0 0 1 3-2.4 2.5 2.5 0 0 1 3 2.4" />
+            <path d="M8 17.5l2.5 2.5 5-5" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-title">KnowledgeForge AI</span>
+          <span class="brand-subtitle">Smart Quiz Engine</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="generate.html" class="nav-link">Generate Quiz</a></li>
+        <li><a href="history.html" class="nav-link">History</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="generate.html" class="nav-link nav-btn-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-tagline-badge">
+        <span>✨ Powered by Gemini AI</span>
+        <span>•</span>
+        <span>C++ REST Architecture</span>
+      </div>
+
+      <h1 class="hero-heading">
+        Turn Any Document Into a <span>Smart Quiz</span>
+      </h1>
+
+      <p class="hero-subheading">
+        Upload your study material and let AI transform it into an interactive quiz in seconds. Master complex topics with immediate feedback, detailed explanations, and weakness analysis.
+      </p>
+
+      <div class="hero-actions">
+        <a href="generate.html" class="btn btn-primary btn-lg" id="heroGenerateBtn">
+          Generate Quiz →
+        </a>
+        <a href="#workflowCard" class="btn btn-secondary btn-lg" id="heroLearnMoreBtn">
+          Learn More
+        </a>
+      </div>
+    </section>
+
+    <!-- Visual Workflow Card -->
+    <section class="workflow-card" id="workflowCard">
+      <h2 class="workflow-title">How KnowledgeForge AI Works</h2>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="workflow-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <div class="workflow-step-name">1. Document</div>
+          <div class="workflow-step-desc">Upload educational PDF or TXT files</div>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+          <div class="workflow-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a8 8 0 0 0-8 8c0 3 2 5.5 5 7v3h6v-3c3-1.5 5-4 5-7a8 8 0 0 0-8-8z"></path>
+              <line x1="9" y1="22" x2="15" y2="22"></line>
+            </svg>
+          </div>
+          <div class="workflow-step-name">2. AI Analysis</div>
+          <div class="workflow-step-desc">Gemini extracts core concepts & questions</div>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+          <div class="workflow-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <div class="workflow-step-name">3. Quiz</div>
+          <div class="workflow-step-desc">Interactive multiple-choice challenge</div>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+          <div class="workflow-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="workflow-step-name">4. Score</div>
+          <div class="workflow-step-desc">Topic breakdowns & explanations</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- One-Click Sample Document Tester -->
+    <section class="sample-section">
+      <h3>Want to test it right now?</h3>
+      <p>Try one of these pre-configured educational modules with one click:</p>
+      <div class="sample-chips">
+        <a href="generate.html?sample=os" class="sample-chip-btn">
+          📄 Operating Systems Principles
+        </a>
+        <a href="generate.html?sample=java" class="sample-chip-btn">
+          ☕ Java OOP Architecture
+        </a>
+        <a href="quiz.html" class="sample-chip-btn" style="background:var(--primary-light); color:var(--primary); border-color:#c7d2fe;">
+          ⚡ Jump to Active Quiz Demo
+        </a>
+      </div>
+    </section>
+
+    <!-- 4 Core Feature Cards -->
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+        </div>
+        <h3 class="feature-title">PDF & TXT Support</h3>
+        <p class="feature-desc">
+          Upload any text-based PDF or raw TXT file up to 10 MB. Text is cleanly normalized and chunked for optimal AI synthesis.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <h3 class="feature-title">AI-Powered Questions</h3>
+        <p class="feature-desc">
+          Intelligently generates targeted multiple-choice questions testing conceptual comprehension rather than mere rote memorization.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="feature-title">Instant Explanations</h3>
+        <p class="feature-desc">
+          Every single question comes with a clear explanation of the correct answer, helping you understand the underlying theory.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <h3 class="feature-title">Performance Analysis</h3>
+        <p class="feature-desc">
+          Identify your strongest topics and pinpoint weak areas with actionable recommendations tailored to your results.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="brand-logo">
+        <div class="brand-icon-wrapper" style="width:32px; height:32px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px; height:18px;">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H14l5 5v12.5a2.5 2.5 0 0 1-2.5 2.5h-10A2.5 2.5 0 0 1 4 19.5Z" />
+            <path d="M8 17.5l2.5 2.5 5-5" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+        </div>
+        <span class="brand-title" style="font-size:1.05rem;">KnowledgeForge AI</span>
+      </div>
+
+      <div class="footer-nav">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="generate.html" class="footer-link">Generate Quiz</a>
+        <a href="history.html" class="footer-link">History</a>
+        <a href="about.html" class="footer-link">About & Architecture</a>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 KnowledgeForge AI. Turn your documents into intelligent quizzes.</div>
+        <div>C++ Crow Framework • Gemini AI Integration</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

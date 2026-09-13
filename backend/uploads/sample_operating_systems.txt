@@ -1,0 +1,15 @@
+Operating Systems Overview
+
+An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs. 
+
+Process Management:
+A process is a program in execution. The execution of a process must progress in a sequential fashion. A process includes the program counter, stack, and data section. The operating system is responsible for process creation, scheduling, synchronization, and termination. Process states include New, Ready, Running, Waiting, and Terminated. When switching between processes, the operating system saves the state of the old process and loads the saved state for the new process through context switching.
+
+CPU Scheduling:
+CPU scheduling is the basis of multiprogrammed operating systems. By switching the CPU among processes, the OS makes the computer more productive. Key scheduling algorithms include First-Come First-Served (FCFS), Shortest-Job-First (SJF), Priority Scheduling, and Round Robin (RR). In Round Robin scheduling, each process gets a small unit of CPU time called a time quantum or time slice.
+
+Deadlocks:
+A deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. Four conditions must hold simultaneously for a deadlock to occur: Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait. The Banker's Algorithm is a classic deadlock avoidance algorithm developed by Edsger Dijkstra that tests for safety by simulating the allocation of predetermined maximum possible amounts of all resources.
+
+Memory Management:
+Main memory and registers are the only storage the CPU can access directly. To manage physical memory effectively, modern systems employ Paging and Segmentation. Paging is a memory management scheme that permits the physical address space of a process to be non-contiguous. Physical memory is broken into fixed-sized blocks called frames, and logical memory is broken into blocks of the same size called pages. A page table is used by the Memory Management Unit (MMU) to translate logical addresses into physical addresses. When a page is not present in physical memory, a page fault interrupt occurs, triggering the OS to retrieve the page from secondary storage.

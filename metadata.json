@@ -1,0 +1,6 @@
+{
+  "name": "KnowledgeForge AI",
+  "description": "Turn your documents into intelligent quizzes with AI-powered quiz generation, instant explanations, and performance analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

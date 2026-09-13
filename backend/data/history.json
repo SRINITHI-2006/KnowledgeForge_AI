@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hist_1",
+    "title": "Operating Systems Architecture & Kernels",
+    "score": 8,
+    "totalQuestions": 10,
+    "percentage": 80,
+    "performanceLevel": "Good",
+    "date": "13 Sep 2026",
+    "difficulty": "medium",
+    "sourceDocument": "os_lecture_notes.pdf",
+    "strongAreas": [
+      "Process Management",
+      "CPU Scheduling"
+    ],
+    "weakAreas": [
+      "Deadlocks",
+      "Memory Management"
+    ],
+    "recommendation": "Review deadlock prevention algorithms (Banker's Algorithm) and paging replacement strategies before attempting another quiz."
+  },
+  {
+    "id": "hist_2",
+    "title": "Java Object-Oriented Programming (OOP)",
+    "score": 9,
+    "totalQuestions": 10,
+    "percentage": 90,
+    "performanceLevel": "Excellent",
+    "date": "12 Sep 2026",
+    "difficulty": "hard",
+    "sourceDocument": "java_oop_concepts.txt",
+    "strongAreas": [
+      "Polymorphism",
+      "Inheritance",
+      "Encapsulation"
+    ],
+    "weakAreas": [
+      "Abstract Classes vs Interfaces"
+    ],
+    "recommendation": "Mastery demonstrated across core OOP tenets. Solidify edge cases around interface default methods."
+  },
+  {
+    "id": "hist_3",
+    "title": "Database Management Systems (DBMS)",
+    "score": 7,
+    "totalQuestions": 10,
+    "percentage": 70,
+    "performanceLevel": "Good",
+    "date": "11 Sep 2026",
+    "difficulty": "medium",
+    "sourceDocument": "dbms_normalization.pdf",
+    "strongAreas": [
+      "Relational Algebra",
+      "SQL Queries"
+    ],
+    "weakAreas": [
+      "Boyce-Codd Normal Form (BCNF)",
+      "ACID Properties in Distributed Systems"
+    ],
+    "recommendation": "Focus on 3NF vs BCNF decomposition and two-phase locking protocols to improve score."
+  }
+]

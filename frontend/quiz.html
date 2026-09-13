@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take Quiz - KnowledgeForge AI</title>
+  <meta name="description" content="Test your knowledge with your AI-generated interactive quiz.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H14l5 5v12.5a2.5 2.5 0 0 1-2.5 2.5h-10A2.5 2.5 0 0 1 4 19.5Z" />
+            <path d="M9 13.5a2.5 2.5 0 0 1 3-2.4 2.5 2.5 0 0 1 3 2.4" />
+            <path d="M8 17.5l2.5 2.5 5-5" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-title">KnowledgeForge AI</span>
+          <span class="brand-subtitle">Interactive Session</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Exit Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Quiz Container -->
+  <main class="main-content">
+    <div class="quiz-container">
+
+      <!-- Quiz Header & Progress -->
+      <div class="quiz-header">
+        <div class="quiz-meta-top">
+          <h2 class="quiz-title" id="quizTitle">Operating Systems Fundamentals</h2>
+          <div class="quiz-badge-group">
+            <span class="question-counter" id="questionCounter">Question 1 of 5</span>
+            <span class="badge badge-primary">Active</span>
+          </div>
+        </div>
+
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progressBarFill" style="width: 20%;"></div>
+        </div>
+
+        <!-- Question Tracker Strip -->
+        <div class="question-nav-strip" id="questionNavStrip">
+          <!-- Dots injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Unanswered Questions Warning Banner -->
+      <div class="unanswered-warning" id="unansweredWarning">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span id="warningText">Please answer all questions before submitting.</span>
+      </div>
+
+      <!-- Active Question Card -->
+      <div class="question-card" id="questionCard">
+        <div>
+          <h3 class="question-text" id="questionText">
+            What is a process in an operating system?
+          </h3>
+
+          <div class="options-list" id="optionsList">
+            <!-- Options dynamically rendered by quiz.js -->
+          </div>
+        </div>
+
+        <!-- Question Navigation Controls -->
+        <div class="quiz-controls">
+          <button type="button" class="btn btn-secondary" id="prevBtn" disabled>
+            ← Previous
+          </button>
+          
+          <button type="button" class="btn btn-primary" id="nextBtn">
+            Next →
+          </button>
+
+          <button type="button" class="btn btn-primary" id="submitBtn" style="display: none; background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+            Submit Quiz ✓
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <div>KnowledgeForge AI • Interactive Session</div>
+        <div>Answers are evaluated immediately upon submission</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

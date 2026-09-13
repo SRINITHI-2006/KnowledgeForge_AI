@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Quiz - KnowledgeForge AI</title>
+  <meta name="description" content="Upload a PDF or TXT document and configure your custom AI quiz parameters.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H14l5 5v12.5a2.5 2.5 0 0 1-2.5 2.5h-10A2.5 2.5 0 0 1 4 19.5Z" />
+            <path d="M9 13.5a2.5 2.5 0 0 1 3-2.4 2.5 2.5 0 0 1 3 2.4" />
+            <path d="M8 17.5l2.5 2.5 5-5" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-title">KnowledgeForge AI</span>
+          <span class="brand-subtitle">Smart Quiz Engine</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="generate.html" class="nav-link active">Generate Quiz</a></li>
+        <li><a href="history.html" class="nav-link">History</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    <div class="generate-container">
+      
+      <div class="section-header">
+        <h1>Create Your Quiz</h1>
+        <p>Upload your educational material or lecture notes to generate tailored questions.</p>
+      </div>
+
+      <div class="card">
+        
+        <!-- Upload Dropzone -->
+        <div class="dropzone" id="dropzone">
+          <div class="dropzone-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+          </div>
+          <div class="dropzone-title">Drag & Drop your PDF or TXT file here</div>
+          <div class="dropzone-subtitle">or click anywhere to browse from your device</div>
+          <button type="button" class="btn btn-secondary btn-sm" id="browseBtn">
+            Browse Files
+          </button>
+
+          <div class="dropzone-meta">
+            <span>📄 Supported formats: PDF, TXT</span>
+            <span>•</span>
+            <span>⚡ Maximum file size: 10 MB</span>
+          </div>
+
+          <input type="file" id="fileInput" class="file-input-hidden" accept=".pdf,.txt" />
+        </div>
+
+        <!-- File Uploaded Info Card (hidden until file selected) -->
+        <div class="file-preview-card" id="filePreviewCard">
+          <div class="file-preview-info">
+            <div class="file-icon-badge" id="fileIconBadge">FILE</div>
+            <div class="file-details">
+              <h4 id="fileNameDisplay">document.pdf</h4>
+              <p>
+                <span id="fileSizeDisplay">2.4 MB</span> • <span id="fileTypeDisplay">PDF Document</span>
+              </p>
+            </div>
+          </div>
+          <button type="button" class="file-remove-btn" id="removeFileBtn" title="Remove File">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Optional Direct Text Paste for Convenience -->
+        <div style="margin-top: 1.25rem;">
+          <button type="button" class="text-paste-toggle" id="textPasteToggle">
+            <span>+ Or paste text notes directly</span>
+          </button>
+          <div class="text-paste-area" id="textPasteArea">
+            <textarea id="rawTextInput" placeholder="Paste your lecture notes, textbook chapters, or summary here..."></textarea>
+          </div>
+        </div>
+
+        <!-- Configuration Options -->
+        <div class="config-group">
+          
+          <!-- Number of Questions -->
+          <div style="margin-bottom: 1.5rem;">
+            <label class="config-label">
+              Number of Questions
+              <span class="config-help">(Select how many questions to synthesize)</span>
+            </label>
+            <div class="pill-group">
+              <div class="pill-option">
+                <input type="radio" id="q5" name="questionCount" value="5" checked />
+                <label for="q5">5</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="q10" name="questionCount" value="10" />
+                <label for="q10">10</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="q15" name="questionCount" value="15" />
+                <label for="q15">15</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="q20" name="questionCount" value="20" />
+                <label for="q20">20</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Difficulty -->
+          <div style="margin-bottom: 1.5rem;">
+            <label class="config-label">
+              Difficulty
+              <span class="config-help">(Adjust cognitive depth of questions)</span>
+            </label>
+            <div class="pill-group">
+              <div class="pill-option">
+                <input type="radio" id="diffEasy" name="difficulty" value="easy" />
+                <label for="diffEasy">Easy</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="diffMed" name="difficulty" value="medium" checked />
+                <label for="diffMed">Medium</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="diffHard" name="difficulty" value="hard" />
+                <label for="diffHard">Hard</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="diffMixed" name="difficulty" value="mixed" />
+                <label for="diffMixed">Mixed</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question Type -->
+          <div>
+            <label class="config-label">
+              Question Type
+            </label>
+            <div class="pill-group" style="max-width: 250px;">
+              <div class="pill-option">
+                <input type="radio" id="typeMcq" name="questionType" value="mcq" checked />
+                <label for="typeMcq">Multiple Choice</label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Action Button -->
+        <div class="generator-actions">
+          <button type="button" class="btn btn-primary btn-lg" id="generateBtn" style="width: 100%;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            Generate Quiz
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Animated Loading Overlay (Does not freeze UI) -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-modal">
+      <div class="spinner"></div>
+      <h3 class="loading-title">Forging Your Quiz</h3>
+      <div class="loading-status-text" id="loadingStatusText">Analyzing your document...</div>
+
+      <div class="loading-steps">
+        <div class="loading-step-item active" id="step1">
+          <span class="loading-step-icon">⏳</span>
+          <span>Analyzing your document...</span>
+        </div>
+        <div class="loading-step-item" id="step2">
+          <span class="loading-step-icon">🤖</span>
+          <span>Generating intelligent questions...</span>
+        </div>
+        <div class="loading-step-item" id="step3">
+          <span class="loading-step-icon">📋</span>
+          <span>Preparing your quiz...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <div>KnowledgeForge AI • Smart Quiz Generator</div>
+        <div><a href="index.html" class="footer-link">Back to Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/upload.js"></script>
+</body>
+</html>
